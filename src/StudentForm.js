@@ -202,7 +202,7 @@ const StudentForm = (props)=>{
 
             
             <ul className="pt-10">
-            {   error.isArray && 
+            {   
                 error?.map((err)=>{
                     
                     return (
