@@ -203,10 +203,10 @@ const StudentForm = (props)=>{
             
             <ul className="pt-10">
             {   
-                error?.map((err)=>{
+                error?.map((err,index)=>{
                     
                     return (
-                        <li className="text-orange-600">{err}</li>
+                        <li className="text-orange-600" key={index}>{err}</li>
                     )
                 })
             }
