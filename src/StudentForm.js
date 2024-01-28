@@ -25,7 +25,7 @@ const StudentForm = (props)=>{
         if(location.state){
         const { studentObj } = location.state
         console.log("Student obj changed")
-        if(studentObj!=null && studentObj!=undefined){
+        if(studentObj!==null && studentObj!==undefined){
             
             setName(studentObj.name)
             setId(studentObj.id)
