@@ -23,22 +23,22 @@ const StudentForm = (props)=>{
 
     useEffect(()=>{
         if(location.state){
-        const { studentObj } = location.state
-        console.log("Student obj changed")
-        if(studentObj!==null && studentObj!==undefined){
-            
-            setName(studentObj.name)
-            setId(studentObj.id)
-            setPhone(studentObj.phone)
-            setEmail(studentObj.email)
-            setQualification(studentObj.qualification)
-            setCurrentStatus(studentObj.currentstatus)
-            setExpectedSalary(studentObj.expectedsalary)
-            setNodeJs(studentObj.nodejs)
-            setReactJs(studentObj.reactjs)
+            const { studentObj } = location.state
+            console.log("Student obj changed")
+            if(studentObj!==null && studentObj!==undefined){
+                
+                setName(studentObj.name)
+                setId(studentObj.id)
+                setPhone(studentObj.phone)
+                setEmail(studentObj.email)
+                setQualification(studentObj.qualification)
+                setCurrentStatus(studentObj.currentstatus)
+                setExpectedSalary(studentObj.expectedsalary)
+                setNodeJs(studentObj.nodejs)
+                setReactJs(studentObj.reactjs)
+            }
         }
-    }  
-    },[])
+    },[location.state])
 
     const validateName = (props) => {
         console.log(props.target.value)
@@ -94,11 +94,6 @@ const StudentForm = (props)=>{
         })
         console.log("Submitted")
     }
-    useEffect(()=>{
-        console.log("Error changed")
-        console.log(error)
-        
-    },[error])
 
     return (
         <div className="container mx-auto">
