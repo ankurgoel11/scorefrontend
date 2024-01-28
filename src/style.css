@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tablefix > thead > tr > th{
+    padding: 10px;
+    text-align: center;
+    background-color: beige;
+}
+
+.tablefix > tbody > tr > td{
+    padding: 10px;
+    text-align: center;
+}
+
+.buttonsubmit {
+    padding: 5px;
+    background-color: skyblue;
+    border: 1px solid grey;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
