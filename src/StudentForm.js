@@ -64,7 +64,7 @@ const StudentForm = (props)=>{
                 }
             }).then(response=>{
                 response.json().then(resp=>{
-                    if(response.status==200){
+                    if(response.status===200){
                         resolve(resp)
                     } else {
                         reject(resp.errors)
